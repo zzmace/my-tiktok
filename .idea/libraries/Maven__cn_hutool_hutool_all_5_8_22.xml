@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.hutool:hutool-all:5.8.22">
+    <CLASSES>
+      <root url="jar://D:/360Downloads/apache-maven-3.6.2-bin/apache-maven-3.6.2/maven_repo/cn/hutool/hutool-all/5.8.22/hutool-all-5.8.22.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/360Downloads/apache-maven-3.6.2-bin/apache-maven-3.6.2/maven_repo/cn/hutool/hutool-all/5.8.22/hutool-all-5.8.22-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/360Downloads/apache-maven-3.6.2-bin/apache-maven-3.6.2/maven_repo/cn/hutool/hutool-all/5.8.22/hutool-all-5.8.22-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
