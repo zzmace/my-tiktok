@@ -7,14 +7,10 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.util.StringJoiner;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-27 19:19
- */
 @RestController
 @ControllerAdvice
 public class ExceptionController {
@@ -45,5 +41,25 @@ public class ExceptionController {
 
         });
         return R.error().message(joiner.toString());
+    }
+
+    /**
+     * 处理参数类型转换异常
+     */
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public R handleTypeMismatch(MethodArgumentTypeMismatchException e) {
+        String parameterName = e.getParameter().getParameterName();
+        String requiredType = e.getRequiredType() != null ? e.getRequiredType().getSimpleName() : "Unknown";
+        Object value = e.getValue();
+        
+        String message;
+        if ("null".equals(String.valueOf(value))) {
+            message = String.format("参数 '%s' 不能为 null", parameterName);
+        } else {
+            message = String.format("参数 '%s' 类型错误，期望类型为 %s，实际值为: %s", 
+                    parameterName, requiredType, value);
+        }
+        
+        return R.error().message(message);
     }
 }

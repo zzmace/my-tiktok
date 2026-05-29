@@ -42,7 +42,7 @@ public class QiNiuConfig {
      */
     private String bucketName;
 
-    public static final String CNAME = "http://s4ep712zo.hn-bkt.clouddn.com";
+    public static final String CNAME = "http://tfp1aqiho.hn-bkt.clouddn.com";
     public static final String VIDEO_URL = "http://ai.qiniuapi.com/v3/video/censor";
     public static final String IMAGE_URL = "http://ai.qiniuapi.com/v3/image/censor";
 

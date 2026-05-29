@@ -103,8 +103,10 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
         MenuKey menuKey2 = new MenuKey();
         menuKey1.setTitle("首页");
         menuKey1.setHref("page/welcome.html?t=1");
+        menuKey1.setImage("/images/logo.png");
         menuKey2.setTitle("一路顺风鸭");
         menuKey2.setHref("/index.html");
+        menuKey2.setImage("/images/logo.png");
         data.put("menuInfo",parentMenu);
         data.put("homeInfo",menuKey1);
         data.put("logoInfo",menuKey2);

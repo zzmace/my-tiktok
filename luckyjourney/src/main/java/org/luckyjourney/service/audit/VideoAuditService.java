@@ -17,11 +17,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-04 15:51
- */
 @Service
 public class VideoAuditService extends AbstractAuditService<String,AuditResponse>{
 

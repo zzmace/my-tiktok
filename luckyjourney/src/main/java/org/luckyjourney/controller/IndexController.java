@@ -21,11 +21,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-27 16:06
- */
+
 @RestController
 @RequestMapping("/luckyjourney/index")
 public class IndexController {

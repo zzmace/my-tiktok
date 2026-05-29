@@ -23,11 +23,6 @@ import javax.annotation.Resource;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-24 19:35
- */
 @RestController
 @RequestMapping("/admin/user")
 public class AdminUserController {

@@ -125,7 +125,6 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video> implements
 
     @Override
     public void publishVideo(Video video) {
-
         final Long userId = UserHolder.get();
         Video oldVideo = null;
         // 不允许修改视频
@@ -179,7 +178,8 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video> implements
                 Long url = video.getUrl();
                 if (url == null || url == 0) url = oldVideo.getUrl();
                 final String fileKey = fileService.getById(url).getFileKey();
-                final String duration = FileUtil.getVideoDuration(QiNiuConfig.CNAME + "/" + fileKey + "?uuid=" + uuid);
+//                final String duration = FileUtil.getVideoDuration(QiNiuConfig.CNAME + "/" + fileKey + "?uuid=" + uuid);
+                final String duration = FileUtil.getVideoDuration(QiNiuConfig.CNAME + "/" + fileKey);
                 video.setDuration(duration);
             } finally {
                 LocalCache.rem(uuid);
@@ -299,7 +299,6 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video> implements
         updateStar(video, result ? 1L : -1L);
         // 获取标签
         final List<String> labels = video.buildLabel();
-
         final UserModel userModel = UserModel.buildUserModel(labels, videoId, 1.0);
         interestPushService.updateUserModel(userModel);
 
@@ -495,7 +494,7 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video> implements
         // 是否存在
         Set<Long> set = redisTemplate.opsForZSet()
                 .reverseRangeByScore(RedisConstant.IN_FOLLOW + userId,
-                        0, lastTime == null ? new Date().getTime() : lastTime, lastTime == null ? 0 : 1, 5);
+                        0, lastTime == null ? new Date().getTime() : lastTime, 0, 5);
         if (ObjectUtils.isEmpty(set)) {
             // 可能只是缓存中没有了,缓存只存储7天内的关注视频,继续往后查看关注的用户太少了,不做考虑 - feed流必然会产生的问题
             return Collections.EMPTY_LIST;

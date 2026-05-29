@@ -282,7 +282,18 @@ public class RedisCacheUtil {
      */
     public boolean hmset(String key, Map<Object, Object> map) {
         try {
-            redisTemplate.opsForHash().putAll(key, map);
+            if (map == null || map.isEmpty()) {
+                return true;
+            }
+            Map<Object, Object> filteredMap = new HashMap<>();
+            for (Map.Entry<Object, Object> entry : map.entrySet()) {
+                if (entry.getKey() != null && entry.getValue() != null) {
+                    filteredMap.put(entry.getKey(), entry.getValue());
+                }
+            }
+            if (!filteredMap.isEmpty()) {
+                redisTemplate.opsForHash().putAll(key, filteredMap);
+            }
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -301,7 +312,21 @@ public class RedisCacheUtil {
     public boolean hmset(String key, Map<String, Object> map, long time) {
 
         try {
-            redisTemplate.opsForHash().putAll(key, map);
+            if (map == null || map.isEmpty()) {
+                if (time > 0) {
+                    expire(key, time);
+                }
+                return true;
+            }
+            Map<String, Object> filteredMap = new HashMap<>();
+            for (Map.Entry<String, Object> entry : map.entrySet()) {
+                if (entry.getKey() != null && entry.getValue() != null) {
+                    filteredMap.put(entry.getKey(), entry.getValue());
+                }
+            }
+            if (!filteredMap.isEmpty()) {
+                redisTemplate.opsForHash().putAll(key, filteredMap);
+            }
             if (time > 0) {
                 expire(key, time);
             }

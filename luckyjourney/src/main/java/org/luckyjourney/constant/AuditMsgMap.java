@@ -3,11 +3,6 @@ package org.luckyjourney.constant;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @description: 审核消息映射关系
- * @Author: Xhy
- * @CreateTime: 2023-10-29 15:59
- */
 public class AuditMsgMap {
 
     static Map<String,String> msgMap = new HashMap<>();

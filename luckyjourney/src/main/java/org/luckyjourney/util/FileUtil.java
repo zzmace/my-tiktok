@@ -5,11 +5,6 @@ import ws.schild.jave.MultimediaObject;
 
 import java.net.URL;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-01 23:09
- */
 public class FileUtil {
 
     public static String getFormat(String fileName){

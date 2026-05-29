@@ -5,11 +5,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 
-/**
- * @description: 本地缓存
- * @Author: Xhy
- * @CreateTime: 2023-11-07 16:34
- */
 public class LocalCache {
     private static Map<String,Object> cache = new ConcurrentHashMap();
 

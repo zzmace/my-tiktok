@@ -5,13 +5,6 @@ import org.luckyjourney.entity.vo.HotVideo;
 
 import java.util.*;
 
-/**
-*
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-04 17:42
-
-*/
 public class TopK {
 
     private int k = 0;

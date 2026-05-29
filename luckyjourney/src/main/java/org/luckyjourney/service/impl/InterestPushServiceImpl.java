@@ -25,11 +25,6 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-26 11:54
- */
 // 暂时为异步
 @Service
 public class InterestPushServiceImpl implements InterestPushService {
@@ -131,13 +126,15 @@ public class InterestPushServiceImpl implements InterestPushService {
             if (modelMap == null) {
                 modelMap = new HashMap<>();
             }
+            
             for (Model model : models) {
                 // 修改用户模型
                 if (modelMap.containsKey(model.getLabel())) {
-                    modelMap.put(model.getLabel(), Double.parseDouble(modelMap.get(model.getLabel()).toString()) + model.getScore());
-                    final Object o = modelMap.get(model.getLabel());
-                    if (o == null || Double.parseDouble(o.toString()) > 0.0){
-                        modelMap.remove(o);
+                    double newValue = Double.parseDouble(modelMap.get(model.getLabel()).toString()) + model.getScore();
+                    if (newValue <= 0.0) {
+                        modelMap.remove(model.getLabel());
+                    } else {
+                        modelMap.put(model.getLabel(), newValue);
                     }
                 } else {
                     modelMap.put(model.getLabel(), model.getScore());
@@ -146,13 +143,26 @@ public class InterestPushServiceImpl implements InterestPushService {
 
             // 每个标签概率同等加上标签数，再同等除以标签数  防止数据膨胀
             final int labelSize = modelMap.keySet().size();
-            for (Object o : modelMap.keySet()) {
-                modelMap.put(o,(Double.parseDouble(modelMap.get(o).toString()) + labelSize )/ labelSize);
+            if (labelSize > 0) {
+                Map<Object, Object> updatedModelMap = new HashMap<>();
+                for (Object label : modelMap.keySet()) {
+                    if (label != null && modelMap.get(label) != null) {
+                        try {
+                            double newValue = (Double.parseDouble(modelMap.get(label).toString()) + labelSize) / labelSize;
+                            updatedModelMap.put(label, newValue);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+                modelMap = updatedModelMap;
             }
+            
             // 更新用户模型
-            redisCacheUtil.hmset(key, modelMap);
+            if (!modelMap.isEmpty()) {
+                redisCacheUtil.hmset(key, modelMap);
+            }
         }
-
     }
 
     @Override

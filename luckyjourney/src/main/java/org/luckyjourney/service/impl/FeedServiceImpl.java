@@ -23,11 +23,6 @@ import org.springframework.util.ObjectUtils;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-03 16:30
- */
 @Service
 public class FeedServiceImpl implements FeedService {
 

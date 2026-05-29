@@ -1,0 +1,37 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://127.0.0.1:3306/lucky?serverTimezone=GMT%2B8
+    username: root
+    password: zzm20031004
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 1364237058@qq.com
+    password: zzm20031004
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: is_deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+qiniu:
+  kodo:
+    access-key: ylwlsE5SraVqFinRJz6fkftYMQEkyH645QhyV2Dn
+    secret-key: W4E09-r9aQpTAz5XVPrOLWXQJyxJ5nv1sYGeuN3G
+    bucket-name: zzzzzm
+server:
+  port: 8882

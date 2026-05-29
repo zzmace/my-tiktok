@@ -12,11 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-04 19:24
- */
 @RestController
 @RequestMapping("/admin/setting")
 public class AdminSettingController {

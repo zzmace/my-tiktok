@@ -6,11 +6,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-/**
- * @description: 找回密码
- * @Author: Xhy
- * @CreateTime: 2023-11-03 14:37
- */
 @Data
 public class FindPWVO {
 

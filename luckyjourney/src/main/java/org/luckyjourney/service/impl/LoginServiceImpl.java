@@ -22,11 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-04 12:38
- */
 @Service
 public class LoginServiceImpl implements LoginService {
 

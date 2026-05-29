@@ -4,11 +4,6 @@ import lombok.Data;
 
 import javax.validation.constraints.Min;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-27 11:56
- */
 @Data
 public class Model {
     private String label;

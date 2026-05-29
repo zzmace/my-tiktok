@@ -5,11 +5,6 @@ import io.jsonwebtoken.lang.Collections;
 import java.util.Collection;
 import java.util.List;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-03 16:27
- */
 public interface FeedService {
 
     /**

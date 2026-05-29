@@ -8,11 +8,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * @description: 兴趣推送
- * @Author: Xhy
- * @CreateTime: 2023-10-26 11:54
- */
 public interface InterestPushService {
 
     /**

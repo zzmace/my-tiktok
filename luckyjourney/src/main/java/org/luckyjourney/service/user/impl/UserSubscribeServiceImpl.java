@@ -9,11 +9,6 @@ import org.luckyjourney.service.user.UserRoleService;
 import org.luckyjourney.service.user.UserSubscribeService;
 import org.springframework.stereotype.Service;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-01 15:05
- */
 @Service
 public class UserSubscribeServiceImpl  extends ServiceImpl<UserSubscribeMapper, UserSubscribe> implements UserSubscribeService {
 }

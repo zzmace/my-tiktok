@@ -29,11 +29,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-24 16:29
- */
+
 
 @RestController
 @RequestMapping("/luckyjourney/login")

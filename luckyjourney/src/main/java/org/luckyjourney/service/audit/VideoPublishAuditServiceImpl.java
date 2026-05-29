@@ -27,11 +27,6 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @description: 视频发布审核
- * @Author: Xhy
- * @CreateTime: 2023-10-29 14:40
- */
 @Service
 public class VideoPublishAuditServiceImpl implements AuditService<VideoTask,VideoTask> , InitializingBean,BeanPostProcessor {
 

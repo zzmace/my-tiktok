@@ -11,11 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-03 21:52
- */
 @RestController
 @RequestMapping("/admin/type")
 public class AdminTypeController {

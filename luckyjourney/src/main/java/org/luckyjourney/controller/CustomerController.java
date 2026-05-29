@@ -17,11 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-25 15:27
- */
+
 @RestController
 @RequestMapping("/luckyjourney/customer")
 public class CustomerController {
@@ -64,7 +60,7 @@ public class CustomerController {
      * @return
      */
     @GetMapping("/follows")
-    public R getFollows(BasePage basePage,Long userId){
+    public R getFollows(BasePage basePage, @RequestParam(required = false) Long userId){
         return R.ok().data(userService.getFollows(userId,basePage));
     }
 
@@ -75,7 +71,7 @@ public class CustomerController {
      * @return
      */
     @GetMapping("/fans")
-    public R getFans(BasePage basePage,Long userId){
+    public R getFans(BasePage basePage, @RequestParam(required = false) Long userId){
         return R.ok().data(userService.getFans(userId,basePage));
     }
 

@@ -18,11 +18,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @description: 图片审核
- * @Author: Xhy
- * @CreateTime: 2023-11-04 15:48
- */
 @Service
 public class ImageAuditService extends AbstractAuditService<String,AuditResponse>{
 

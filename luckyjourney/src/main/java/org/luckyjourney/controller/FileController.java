@@ -16,11 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-11-27 20:47
- */
+
 @RestController
 @RequestMapping("/luckyjourney/file")
 public class FileController implements InitializingBean {

@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: ws.schild:jave-nativebin-win32:2.5.1">
     <CLASSES>
-      <root url="jar://D:/360Downloads/apache-maven-3.6.2-bin/apache-maven-3.6.2/maven_repo/ws/schild/jave-nativebin-win32/2.5.1/jave-nativebin-win32-2.5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/ws/schild/jave-nativebin-win32/2.5.1/jave-nativebin-win32-2.5.1.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://D:/360Downloads/apache-maven-3.6.2-bin/apache-maven-3.6.2/maven_repo/ws/schild/jave-nativebin-win32/2.5.1/jave-nativebin-win32-2.5.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/ws/schild/jave-nativebin-win32/2.5.1/jave-nativebin-win32-2.5.1-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://D:/360Downloads/apache-maven-3.6.2-bin/apache-maven-3.6.2/maven_repo/ws/schild/jave-nativebin-win32/2.5.1/jave-nativebin-win32-2.5.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/ws/schild/jave-nativebin-win32/2.5.1/jave-nativebin-win32-2.5.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

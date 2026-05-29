@@ -16,11 +16,6 @@ import org.springframework.util.ObjectUtils;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @description: 内容审核
- * @Author: Xhy
- * @CreateTime: 2023-11-04 15:49
- */
 @Service
 public class TextAuditService extends AbstractAuditService<String,AuditResponse>{
 

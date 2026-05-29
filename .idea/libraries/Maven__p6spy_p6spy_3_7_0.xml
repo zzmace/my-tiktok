@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: p6spy:p6spy:3.7.0">
     <CLASSES>
-      <root url="jar://D:/360Downloads/apache-maven-3.6.2-bin/apache-maven-3.6.2/maven_repo/p6spy/p6spy/3.7.0/p6spy-3.7.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/p6spy/p6spy/3.7.0/p6spy-3.7.0.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://D:/360Downloads/apache-maven-3.6.2-bin/apache-maven-3.6.2/maven_repo/p6spy/p6spy/3.7.0/p6spy-3.7.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/p6spy/p6spy/3.7.0/p6spy-3.7.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://D:/360Downloads/apache-maven-3.6.2-bin/apache-maven-3.6.2/maven_repo/p6spy/p6spy/3.7.0/p6spy-3.7.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/p6spy/p6spy/3.7.0/p6spy-3.7.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

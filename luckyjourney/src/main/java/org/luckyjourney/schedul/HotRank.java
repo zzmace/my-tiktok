@@ -22,11 +22,6 @@ import org.springframework.util.ObjectUtils;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @description: 热度排行榜
- * @Author: Xhy
- * @CreateTime: 2023-10-31 00:50
- */
 @Component
 public class HotRank {
 
@@ -52,7 +47,7 @@ public class HotRank {
     /**
      * 热度排行榜
      */
-    @Scheduled(cron = "0 0 */1 * * ?")
+    @Scheduled(cron = "0 * * * * ?")
     public void hotRank() {
         // 控制数量
         final TopK topK = new TopK(10, new PriorityQueue<HotVideo>(10, Comparator.comparing(HotVideo::getHot)));
@@ -105,7 +100,7 @@ public class HotRank {
     }
 
     // 热门视频,没有热度排行榜实时且重要
-    @Scheduled(cron = "0 0 */3 * * ?")
+    @Scheduled(cron = "0 * * * * ?")
     public void hotVideo() {
         // 分片查询3天内的视频
         int limit = 1000;

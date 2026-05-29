@@ -14,11 +14,6 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-27 15:39
- */
 @Data
 public class VideoVO implements Serializable {
 

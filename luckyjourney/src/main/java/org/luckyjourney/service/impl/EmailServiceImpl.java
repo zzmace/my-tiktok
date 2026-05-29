@@ -10,11 +10,6 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-25 15:07
- */
 @Service
 public class EmailServiceImpl implements EmailService {
 

@@ -3,11 +3,6 @@ package org.luckyjourney.constant;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @description:
- * @Author: Xhy
- * @CreateTime: 2023-10-29 01:16
- */
 public class AuditStatus {
     public static Integer SUCCESS = 0; // 通过
     public static Integer PROCESS = 1; // 审核中
